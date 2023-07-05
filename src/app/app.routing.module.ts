@@ -3,9 +3,10 @@
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
-import { CrisnailsComponent } from './privacy/crisnails/crisnails.component';
 import { MainComponent } from './home/main/main.component';
+import { CrisnailsComponent } from './privacy/crisnails/crisnails.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
   ],
   exports: [
     RouterModule,
-  ]
+  ],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }]
 })
 export class AppRoutingModule { }
