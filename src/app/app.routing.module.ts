@@ -15,6 +15,10 @@ const routes: Routes = [
     component: MainComponent
   },
   {
+    path: 'services',
+    component: MainComponent
+  },
+  {
     path: 'privacy-crisnails-app',
     component: CrisnailsComponent,
   },
